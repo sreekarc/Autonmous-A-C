@@ -1,0 +1,273 @@
+body{
+	font-family: Arial;
+	color: rgb(80, 80, 80);
+}
+
+a {
+text-decoration: none;
+}
+
+a.empty {
+	cursor: default;
+}
+
+span {
+    word-wrap:break-word;
+}
+
+/* Messages, Results styling */
+
+span.suiteHeader, span.pass, span.skipped, span.log {
+    border-left-style: solid;
+	border-left-width: 6px;
+}
+
+span.suiteHeader {
+    border-color: #D20004;
+}
+
+.covlink, .covlink:visited, .covlink:hover  {
+    color: rgb(80, 80, 80);;
+}
+
+span.pass {
+    border-color: #45740B;
+}
+
+span.skipped {
+    border-color: #AAAAAA;
+}
+
+span.log {
+    border-color: #AAAAAA;
+}
+
+span.skippedColor {
+    color: #B9B9B9;
+}
+
+span.warning {
+    border-color: #E6E600;
+}
+
+span.time {
+    float: right;
+}
+
+/* Test Title styling */
+
+span.proc {
+	width: 7%;
+	display: inline-block;
+}
+
+span.failures {
+	width: 21%;
+	display: inline-block;
+}
+
+span.name {
+	width: 50%;
+	display: inline-block;
+}
+
+span.duration {
+	width: auto;
+	padding-left: 10px;
+	display: inline-block;
+}
+
+span.fcount {
+	border-bottom: 1px dotted #D20004;
+}
+
+span.fcount:hover {
+     border-bottom: 1px solid #D20004;
+}
+
+span.suiteHeader {
+	display: block;
+    box-shadow: 1px 1px 1px rgb(180,180,180);
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 1px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 1px;
+}
+
+span.suiteHeader_l0{
+    background-color: rgb(252,252,252);
+}
+
+span.suiteHeader_l1{
+    background-color: rgb(244,244,244);
+}
+
+span.suiteHeader_l2{
+    background-color: rgb(236,236,236);
+}
+
+span.suiteHeader_l3{
+    background-color: rgb(228,228,228);
+}
+
+span.suiteHeader_l4{
+    background-color: rgb(220,220,220);
+}
+
+span.suiteHeader_l5{
+    background-color: rgb(212,212,212);
+}
+
+span.suiteHeader_l6{
+    background-color: rgb(204,204,204);
+}
+
+
+/*----- Title styling -----*/
+
+#squishTitle a {
+	text-decoration: underline;
+}
+
+#squishTitle a:visited{
+     color: inherit;
+}
+
+#squishTitle a:link{
+     color: inherit;
+}
+
+div.box {
+	display: block;
+    box-shadow: 1px 1px 1px rgb(180,180,180);
+    background-color: rgb(252,252,252);
+    padding-left: 5px;
+    padding-right: 1px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+}
+
+
+.big {
+	font-weight: bold;
+	color: rgb(80, 80, 80);
+}
+
+.bigsize0 {
+	font-size: 22px;
+}
+
+.bigsize1 {
+	font-size: 12px;
+}
+
+.small{
+	color: rgb(90, 90, 90);
+}
+
+.smallsize0 {
+	font-size: 14px;
+}
+
+.smallsize1 {
+	font-size: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+/*----- Accordian Content -----*/
+.acc-section-content {
+    padding-top:1px;
+    padding-bottom:1px;
+    padding-left: 20px;
+    display:none;
+}
+
+
+div.acc-section-details {
+	margin-top: -2px;
+	padding-left: 0px;
+    padding-right: 0px;
+}
+
+span.whitespace-pre, div.whitespace-pre {
+    white-space: pre-wrap;
+}
+
+.donut-chart {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.donut-chart .slice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.donut-chart .chart-center {
+  position: absolute;
+  border-radius: 50%;
+}
+.donut-chart .chart-center span {
+  display: block;
+  text-align: center;
+}
+
+.donut-chart.chart1 {
+  width: 200px;
+  height: 200px;
+  background: #e1e1e1;
+}
+.donut-chart.chart1 .slice.one {
+  clip: rect(0 200px 100px 0);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  background: #50c690;
+}
+.donut-chart.chart1 .slice.two {
+  clip: rect(0 100px 200px 0);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  background: #50c690;
+}
+.donut-chart.chart1 .chart-center {
+  top: 10px;
+  left: 10px;
+  width: 180px;
+  height: 180px;
+  background: #fff;
+}
+.donut-chart.chart1 .chart-center span {
+  font-size: 40px;
+  line-height: 180px;
+  color: #50c690;
+}
+.donut-chart.chart1 .chart-center span:after {
+  content: "75%";
+}
+
+#testTable {
+  margin-top: 5em;
+}
+
+#addPath {
+  top: 40em;
+  right: 0px;
+  background-color:black;
+  color:red;
+  margin-right: 0px;
+}
+#div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+</style>

@@ -1,0 +1,22 @@
+{
+  "name": "test_control",
+  "version": "1.0.0",
+  "description": "hosts a web page to control test case flow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ICS",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "child_process": "^1.0.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "glob": "^7.1.2",
+    "morgan": "^1.9.0",
+    "serve-favicon": "^2.4.5",
+    "socket.io": "^2.0.4"
+  }
+}

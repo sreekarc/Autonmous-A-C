@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mind Labs</title>
+    <link rel="shortcut icon" href="mindlabslogo.png" type="png">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
+</head>
+<style>
+.center {
+    margin: auto;
+    width:15%;
+    padding: 10px;
+}
+</style>
+<body>
+
+<div class="ui segment">
+    <div class="ui secondary menu">
+            <img STYLE="position:absolute; TOP:10px; LEFT:15px; WIDTH:50px; HEIGHT:50px"  src="mindlabslogo.png" alt="Mind Labs Logo">
+            <h1 STYLE="position:absolute; TOP:0px; LEFT:75px" onclick="window.location.href='index.html'">Mind Labs</h1>
+        <div class="right menu">
+            <a class="item" onclick="window.location.href='index.html'">Home</a>
+            <a class="active item" onclick="window.location.href='ac-project.html'">A/C Project</a>
+            <a class="item" onclick="window.location.href='maps.html'">Farm Bot</a>
+            <a class="item" onclick="window.location.href='about.html'">About Us</a>
+        </div>
+    </div>
+</div>
+
+<h1>Auto Air Conditioning</h1>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script> 
+
+<div class="center">
+	<div id="display" style="width:100%;height:150px;background-color:lightgrey;font-size:100px;text-align:center;line-height:140%;margin:5px;"></div>
+	<button id="tempup" style="width:100%; height:150px;margin:5px;" onclick="temperatureUpDown(1)">UP</button>
+	<button id="power" style="width:100%; height:150px;margin:5px;" onclick="temperatureOff()">POWER</button>
+	<button id="tempdown" style="width:100%; height:150px;margin:5px;" onclick="temperatureUpDown(-1)">DOWN</button>
+</div>
+
+<script>
+	var temp = 0;
+	if(localStorage.getItem("temKey") == null){
+		temp = 0;
+	}
+	else{
+		temp = localStorage.getItem("temKey");
+		temp = parseInt(temp, 10)
+	}
+
+	if(temp == 0){
+		document.getElementById("display").innerHTML = "off";
+	}
+	else{
+		document.getElementById("display").innerHTML = temp.toString();
+	}
+
+</script>
+
+<script>
+	function SendFunc(power) {
+		if(power == "temp"){
+			var msg = JSON.stringify({"temp":temp});
+		}
+		else if(power == "on") {
+			var msg = JSON.stringify({"temp":"on"});
+		}
+		else{
+			var msg = JSON.stringify({"temp":"off"});
+		}
+        	console.log(msg)
+        	var socket = io();
+        	socket.emit('temperature', msg);
+        	return;
+   	}
+
+	function temperatureUpDown(value){
+		if(temp == 0){
+			console.log("turn on device");
+		}
+		else{
+			temp += (value);
+			if(temp<60){
+				temp = 60;
+			}
+			if(temp>76){
+				temp = 76;
+			}
+	
+			document.getElementById("display").innerHTML = temp.toString();
+			localStorage.setItem("temKey", temp);
+			SendFunc("temp");
+		}
+		
+	}
+	
+	function temperatureOff(){
+		if(document.getElementById("display").innerHTML == "off"){
+			temp = 68;
+			document.getElementById("display").innerHTML = temp.toString();
+			localStorage.setItem("temKey", temp);
+			SendFunc("on");
+		}
+		else{
+			temp = 0;
+			document.getElementById("display").innerHTML = "off";
+			localStorage.setItem("temKey", temp);
+			SendFunc("off");
+
+		}
+	}
+
+</script>
+
+</body>
+</html> 
