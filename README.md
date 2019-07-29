@@ -11,8 +11,8 @@ Transistor
 1K Ohm Resistor
 
 The circuit for this project should look like this:
-(Picture of Circuit)
 
+![alt text](https://cdn.instructables.com/FEL/FXOD/J7MFSVLB/FELFXODJ7MFSVLB.LARGE.jpg)
 
 After completing the circuit on a breadboard I soldered it together and shrink-wrapped it to look nice.
 
