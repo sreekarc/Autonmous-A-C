@@ -1,1 +1,33 @@
-Program that uses raspberry pi and ir led to control a/c
+My goal for this project was to use a Raspberry Pi 3 to control my A/C and connect it to the cloud. My A/C system is pretty old and controlled by an IR Remote, and I wanted to be able to control it with my phone or computer. I wanted to be able to use a phone or computer so that I could control my A/C from anywhere, including when I was outside my house, so I decided to use a Raspberry Pi and IR Led. Here are the steps to get the Pi ready with code and to make the circuit to control your A/C. To encase the Raspberry Pi and circuit I created and 3D-printed a plastic case.
+
+(Picture of Case)
+
+
+What I used for this Project:
+Raspberry Pi 3
+IR Led
+IR Receiver
+Transistor
+1K Ohm Resistor
+
+The circuit for this project should look like this:
+(Picture of Circuit)
+
+
+After completing the circuit on a breadboard I soldered it together and shrink-wrapped it to look nice.
+
+After the circuit is completed you will need to start with the code and setting up the pi. 
+
+First after installing noobs on the raspberry pi I wrote programs onto the pi that would create a website that would be used to control the a/c. Underneath is the link to them.
+(project link from github)
+
+ I did not write the python code to record and playback ir codes. I got that from this link:
+http://abyz.me.uk/rpi/pigpio/examples.html
+Specific File:
+IR Record and Playback
+
+Then I used the command “ ./irrp.py -r -g4 -fcodes 1 2 3 4 5 6 ” to record each ir command that you want your raspberry pi remote to playback. When I ran the command I had numbers 1 through 20 because I had 20 different codes, 1 for each temperature and 2 for the on/off.
+
+After all the code was set up I modeled a case that would fit a raspberry pi and all the circuitry with Autodesk Inventor and printed it with my 3D printer.
+
+(Picture of Case)
