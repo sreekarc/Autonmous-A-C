@@ -32,4 +32,4 @@ After all the code was set up I modeled a case that would fit a raspberry pi and
 
 ![ac](https://user-images.githubusercontent.com/15959693/62400819-a01f6780-b54e-11e9-9b17-b91f93819d07.PNG)
 
-The main communication method was a raspberry pi hosting a website that any device on the internet could go on. From there you can control the temperature from anywhere as long as you're on the same wifi. I also have made a android app that can connect to the raspberry pi for easier control.
+The main communication method is a raspberry pi hosting a website that any device on the internet can go on. From there you can control the temperature from anywhere as long as you're on the same wifi. I also made an android app that can connect to the raspberry pi for easier temperature control.
