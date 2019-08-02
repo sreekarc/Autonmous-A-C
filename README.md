@@ -4,14 +4,19 @@ My goal for this project was to use a Raspberry Pi 3 to control my A/C and conne
 
 
 What I used for this Project:
+
 Raspberry Pi 3
+
 IR Led
+
 IR Receiver
+
 Transistor
+
 1K Ohm Resistor
 
-The circuit for this project should look like this:
 
+The circuit for this project should look like this:
 ![alt text](https://cdn.instructables.com/FEL/FXOD/J7MFSVLB/FELFXODJ7MFSVLB.LARGE.jpg)
 
 After completing the circuit on a breadboard I soldered it together and shrink-wrapped so it would look nice.
