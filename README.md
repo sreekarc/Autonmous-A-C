@@ -1,20 +1,16 @@
-My goal for this project was to use a Raspberry Pi 3 to control my A/C and connect it to the cloud. My A/C system is pretty old and controlled by an IR Remote, and I wanted to be able to control it with my phone or computer. I wanted to be able to use a phone or computer so that I could control my A/C from anywhere, including when I was outside my house, so I decided to use a Raspberry Pi and IR Led. Here are the steps to get the Pi ready with code and to make the circuit to control your A/C. To encase the Raspberry Pi and circuit I created and 3D-printed a plastic case.
-
-(Picture of Case)
-
+My goal for this project was to use a Raspberry Pi 3 to control my A/C and connect it to the cloud. My A/C system is pretty old and controlled by an IR Remote, and I wanted to be able to control it with my phone or computer. I wanted to be able to use a phone or computer to control my A/C from anywhere, including when I was outside my house, so I decided to use a Raspberry Pi and IR Led. Here is how I made my old A/C system a little bit smarter.
 
 What I used for this Project:
 
-Raspberry Pi 3
+Raspberry Pi 3  
 
 IR Led
-
+  
 IR Receiver
-
+  
 Transistor
-
+  
 1K Ohm Resistor
-
 
 The circuit for this project should look like this:
 ![alt text](https://cdn.instructables.com/FEL/FXOD/J7MFSVLB/FELFXODJ7MFSVLB.LARGE.jpg)
@@ -23,8 +19,7 @@ After completing the circuit on a breadboard I soldered it together and shrink-w
 
 After the circuit is completed you will need to start with the code and setting up the pi. 
 
-First after installing noobs on the raspberry pi I wrote programs onto the pi that would create a website that would be used to control the a/c. Underneath is the link to them.
-(project link from github)
+First after installing noobs on the raspberry pi I wrote programs onto the pi that would create a website that would be used to control the a/c. Above is all the code needed that should be put on the raspberry pi.
 
 I wrote all of the code except for one file, I did not write the python code to record and playback ir codes. I got that from this link:
 http://abyz.me.uk/rpi/pigpio/examples.html
