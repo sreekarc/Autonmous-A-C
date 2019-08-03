@@ -17,9 +17,9 @@ The circuit for this project should look like this:
 
 After completing the circuit on a breadboard I soldered it together and shrink-wrapped so it would look nice.
 
-After the circuit is completed you will need to start with the code and setting up the pi. 
+After the circuit is completed I started to set up the pi with the code. 
 
-First after installing noobs on the raspberry pi I wrote programs onto the pi that would create a website that would be used to control the a/c. Above is all the code needed that should be put on the raspberry pi.
+First after installing noobs on the raspberry pi I wrote programs onto the pi that would create a website that would be used to control the a/c. To do this I first created a simple node js website. After that I installed socket.io using npm install. My main html webpage is above. The code in routes.js and index.js was written into the corresponding files so an outside device coud talk to the pie. The python files were also made in the same folder.
 
 I wrote all of the code except for one file, I did not write the python code to record and playback ir codes. I got that from this link:
 http://abyz.me.uk/rpi/pigpio/examples.html
