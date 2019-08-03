@@ -28,8 +28,16 @@ IR Record and Playback
 
 Then I used the command “ ./irrp.py -r -g4 -fcodes 1 2 3 4 5 6 ” to record each ir command that you want your raspberry pi remote to playback. When I ran the command I had numbers 1 through 20 because I had 20 different codes, 1 for each temperature and 2 for the on/off.
 
+The main communication method is a raspberry pi hosting a web server that any device on the internet can go on. There is an website where you can control the temperature from anywhere as long as you're on the same wifi. I also made an android app that can connect to the raspberry pi  server for easier temperature control. The code to the phone app is here: https://github.com/sreekarc/AutonomousA-C-Phone-App
+
+After all the code was done there was one last thing I had to do, which was make it so that the code would all start running as the pi booted up. This way it could be headless. To do this I first went to the terminal and wrote sudo nano /etc/rc.local. Then I added these three lines of code to the end of the file right before "exit 0":
+
+sudo pigpiod
+
+/usr/bin/python3 /home/pi/AC_Project/MindLabs/temperature.py >> /tmp/junk.txt &
+
+node /home/pi/AC_Project/MindLabs/index.js >> /tmp/junk1.txt &
+
 After all the code was set up I modeled a case that would fit a raspberry pi and all the circuitry with Autodesk Inventor and printed it with my 3D printer.
 
 ![ac](https://user-images.githubusercontent.com/15959693/62400819-a01f6780-b54e-11e9-9b17-b91f93819d07.PNG)
-
-The main communication method is a raspberry pi hosting a web server that any device on the internet can go on. There is an website where you can control the temperature from anywhere as long as you're on the same wifi. I also made an android app that can connect to the raspberry pi  server for easier temperature control. The code to the phone app is here: https://github.com/sreekarc/AutonomousA-C-Phone-App
